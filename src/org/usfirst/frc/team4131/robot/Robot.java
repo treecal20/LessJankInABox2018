@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4131.robot.subsystems.DriveBase;
+import org.usfirst.frc.team4131.robot.subsystems.Pneumatics;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,6 +21,7 @@ import org.usfirst.frc.team4131.robot.subsystems.DriveBase;
 public class Robot extends IterativeRobot {
 
 	public static final DriveBase drive = new DriveBase();
+	public static final Pneumatics air = new Pneumatics();
 	public static final OI OI = new OI();
 	
 	Command autonomousCommand;
@@ -68,6 +70,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		air.sendPressure();
 	}
 
 	/**

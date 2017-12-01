@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team4131.robot.subsystems.DoubleSolenoidExample;
 import org.usfirst.frc.team4131.robot.subsystems.DriveBase;
 import org.usfirst.frc.team4131.robot.subsystems.Pneumatics;
 
@@ -22,6 +23,7 @@ public class Robot extends IterativeRobot {
 
 	public static final DriveBase drive = new DriveBase();
 	public static final Pneumatics air = new Pneumatics();
+	public static final DoubleSolenoidExample solenoid = new DoubleSolenoidExample();
 	public static final OI OI = new OI();
 	
 	Command autonomousCommand;
